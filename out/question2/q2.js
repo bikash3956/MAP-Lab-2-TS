@@ -1,6 +1,5 @@
 "use strict";
-let bankAccount;
-bankAccount = {
+let bankAccount = {
     money: 2000,
     deposit(value) {
         this.money += value;
@@ -9,8 +8,8 @@ bankAccount = {
 ;
 let myself = {
     name: "John",
-    bankAccount: bankAccount,
+    bAcc: bankAccount,
     hobbies: ["Violin", "Cooking"]
 };
-myself.bankAccount.deposit(3000);
+myself.bAcc.deposit(3000);
 console.log(myself);
