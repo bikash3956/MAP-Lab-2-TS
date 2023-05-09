@@ -1,43 +1,22 @@
-abstract class Shape {
-abstract calcSize(): number;
-constructor(protected type: string){
-}
-}
+let baseObject = { 
+	width: 0, 
+	length: 0 
+}; 
+let rectangle: {width: number, length: number, calcSize: () => number}  = Object.create(baseObject); 
 
-class Rectangle extends Shape{
-    private width: number;
-    private length: number;
-    constructor(width: number, length: number, type: string){
-        super(type);
-        this.width = width;
-        this.length = length;
-    }
-    calcSize(): number {
-        return this.width * this.length; 
-    }
-    setWidth(width: number) : void {
-        this.width = width;
-    }
-    getWidth(): number{
-        return this.width;
-    }
-    setLength(length: number) : void {
-        this.length = length;
-    }
-    getLength(): number{
-        return this.length;
-    }
-
-    
-}
-
-let rectangle: Rectangle = new Rectangle(4,5, 'Rectangle');
-
-rectangle.setWidth(5); 
-rectangle.setLength(2); 
+rectangle.width = 5; 
+rectangle.length = 2; 
 
 rectangle.calcSize = function() { 
-	return this.getWidth() * this.getLength(); 
+	return this.width * this.length; 
 }; 
 
 console.log(rectangle.calcSize()); // 10
+
+
+enum Week {
+	SUN, MON, TUE
+}
+
+let day: number = Week.SUN;
+console.log(Week);

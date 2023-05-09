@@ -1,35 +1,20 @@
 "use strict";
-class Shape {
-    constructor(type) {
-        this.type = type;
-    }
-}
-class Rectangle extends Shape {
-    constructor(width, length, type) {
-        super(type);
-        this.width = width;
-        this.length = length;
-    }
-    calcSize() {
-        return this.width * this.length;
-    }
-    setWidth(width) {
-        this.width = width;
-    }
-    getWidth() {
-        return this.width;
-    }
-    setLength(length) {
-        this.length = length;
-    }
-    getLength() {
-        return this.length;
-    }
-}
-let rectangle = new Rectangle(4, 5, 'Rectangle');
-rectangle.setWidth(5);
-rectangle.setLength(2);
+let baseObject = {
+    width: 0,
+    length: 0
+};
+let rectangle = Object.create(baseObject);
+rectangle.width = 5;
+rectangle.length = 2;
 rectangle.calcSize = function () {
-    return this.getWidth() * this.getLength();
+    return this.width * this.length;
 };
 console.log(rectangle.calcSize()); // 10
+var Week;
+(function (Week) {
+    Week[Week["SUN"] = 0] = "SUN";
+    Week[Week["MON"] = 1] = "MON";
+    Week[Week["TUE"] = 2] = "TUE";
+})(Week || (Week = {}));
+let day = Week[0];
+console.log(Week);
