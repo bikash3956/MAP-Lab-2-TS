@@ -28,4 +28,4 @@ let car = new Car("BMW");
 car.honk(); // BMW is saying: Toooooooooot!
 console.log(car.getAcceleration()); // 0
 car.accelerate(60);
-console.log(car.getAcceleration()); // 60
+console.log(car.getAcceleration()); // 60asdfasdfsda
