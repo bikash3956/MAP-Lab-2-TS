@@ -1,3 +1,4 @@
+
 abstract class Vehicle {
     protected name: string;
     constructor(name: string) {
@@ -23,7 +24,7 @@ class Car extends Vehicle {
     }
 }
 
-let car: Car = new Car("BMW");
+let car = new Car("BMW");
 car.honk(); // BMW is saying: Toooooooooot!
 console.log(car.getAcceleration()); // 0
 car.accelerate(60);

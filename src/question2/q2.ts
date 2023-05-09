@@ -2,7 +2,8 @@
 let bankAccount: { 
 	money: number, 
 	deposit(value: number): void
-} = { 
+}; 
+ bankAccount = { 
 	money: 2000, 
 	deposit(value) { 
 		this.money += value; 
@@ -11,18 +12,15 @@ let bankAccount: {
 
 interface MySelf{ 
 	name: string, 
-	bAcc: typeof bankAccount, 
+	bankAccount: any, 
 	hobbies: Array<string> 
 }; 
 
 let myself: MySelf = { 
 	name: "John", 
-	bAcc: bankAccount, 
+	bankAccount: bankAccount, 
 	hobbies: ["Violin", "Cooking"] 
 }; 
 
-myself.bAcc.deposit(3000); 
+myself.bankAccount.deposit(3000); 
 console.log(myself);
-
-
-
